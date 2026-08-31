@@ -82,7 +82,7 @@ export const OverviewDashboard: React.FC<OverviewDashboardProps> = ({
         <div>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-semibold backdrop-blur-xs mb-2">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Hệ Thống Kho & Bán Lẻ Vitamin Shopp</span>
+            <span>Hệ Thống Kho & Bán Lẻ Vitamin Shop</span>
           </div>
           <h2 className="text-xl sm:text-2xl font-black tracking-tight">
             Quản Lý {products.length} Sản Phẩm
