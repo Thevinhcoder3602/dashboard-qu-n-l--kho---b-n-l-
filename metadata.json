@@ -1,0 +1,6 @@
+{
+  "name": "Dashboard Quản Lý Kho & Bán Lẻ",
+  "description": "Hệ thống quản lý kho hàng và bán lẻ cá nhân siêu tinh gọn với đồng bộ LocalStorage, theo dõi tồn kho và cảnh báo thông minh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

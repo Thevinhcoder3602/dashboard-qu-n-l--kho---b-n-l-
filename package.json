@@ -1,0 +1,70 @@
+{
+  "name": "vitamin-shop-app",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Vitamin Shop - Quản Lý Kho & Bán Lẻ",
+  "author": "Vitamin Shop",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "node ./node_modules/vite/bin/vite.js --port=3000 --host=0.0.0.0",
+    "build": "node ./node_modules/vite/bin/vite.js build",
+    "preview": "node ./node_modules/vite/bin/vite.js preview",
+    "clean": "node -e \"fs.rmSync('dist',{recursive:true,force:true});try{fs.unlinkSync('server.js')}catch(e){}\"",
+    "lint": "node ./node_modules/typescript/bin/tsc --noEmit",
+    "electron:start": "node ./node_modules/electron/cli.js .",
+    "electron:build": "node ./node_modules/vite/bin/vite.js build && node ./node_modules/electron-builder/cli.js --win --x64"
+  },
+  "build": {
+    "appId": "com.vitaminshop.inventory",
+    "productName": "Vitamin Shop",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Vitamin Shop"
+    },
+    "portable": {
+      "artifactName": "Vitamin-Shop-Portable.exe"
+    }
+  },
+  "dependencies": {
+    "@google/genai": "^2.4.0",
+    "@tailwindcss/vite": "^4.1.14",
+    "@vitejs/plugin-react": "^5.0.4",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "vite": "^6.2.3"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.3.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.14.0",
+    "autoprefixer": "^10.4.21",
+    "electron": "^44.0.0",
+    "electron-builder": "^26.15.3",
+    "esbuild": "^0.25.0",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.3"
+  }
+}
