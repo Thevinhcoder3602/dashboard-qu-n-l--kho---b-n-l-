@@ -82,7 +82,7 @@ export const OverviewDashboard: React.FC<OverviewDashboardProps> = ({
         <div>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-semibold backdrop-blur-xs mb-2">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Hệ Thống Kho & Bán Lẻ Vitamin Shop</span>
+            <span>Hệ Thống Kho & Bán Lẻ Vitamin Shopp</span>
           </div>
           <h2 className="text-xl sm:text-2xl font-black tracking-tight">
             Quản Lý {products.length} Sản Phẩm
@@ -182,18 +182,16 @@ export const OverviewDashboard: React.FC<OverviewDashboardProps> = ({
               Cảnh Báo Tồn Kho Ít
             </span>
             <div
-              className={`w-9 h-9 rounded-xl flex items-center justify-center ${
-                lowStockProducts.length > 0 ? 'bg-amber-50 text-amber-600' : 'bg-slate-100 text-slate-400'
-              }`}
+              className={`w-9 h-9 rounded-xl flex items-center justify-center ${lowStockProducts.length > 0 ? 'bg-amber-50 text-amber-600' : 'bg-slate-100 text-slate-400'
+                }`}
             >
               <AlertTriangle className="w-4 h-4" />
             </div>
           </div>
           <div className="mt-3">
             <div
-              className={`text-xl sm:text-2xl font-black ${
-                lowStockProducts.length > 0 ? 'text-amber-600' : 'text-slate-900'
-              }`}
+              className={`text-xl sm:text-2xl font-black ${lowStockProducts.length > 0 ? 'text-amber-600' : 'text-slate-900'
+                }`}
             >
               {lowStockProducts.length} <span className="text-sm font-normal text-slate-500">mã SP</span>
             </div>
